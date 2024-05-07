@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2024-05-07 20:58:08",
+    "exportTime": "2024-05-07 21:05:20",
     "containerVersion": {
         "path": "accounts/6007297538/containers/67678269/versions/0",
         "accountId": "6007297538",
@@ -377,9 +377,9 @@
                         "value": "logEvent"
                     }
                 ],
-                "fingerprint": "1715115325406",
+                "fingerprint": "1715115876327",
                 "firingTriggerId": [
-                    "2147479553"
+                    "837"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT",
                 "monitoringMetadata": {
@@ -445,7 +445,7 @@
                 "accountId": "6007297538",
                 "containerId": "67678269",
                 "triggerId": "831",
-                "name": "All Pages | All Events 一 Running On Webview",
+                "name": "All Pages | All Events 一 Running In Webview",
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
                     {
@@ -481,7 +481,49 @@
                         ]
                     }
                 ],
-                "fingerprint": "1715103154186"
+                "fingerprint": "1715115885497"
+            },
+            {
+                "accountId": "6007297538",
+                "containerId": "67678269",
+                "triggerId": "837",
+                "name": "Some Pages | Some Event 一 Running In Webview",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "evento_qualquer"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{window.runningInWebview | Global}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "true"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1715115872952"
             }
         ],
         "variable": [
@@ -827,7 +869,7 @@
                 "name": "Event"
             }
         ],
-        "fingerprint": "1715115488111",
+        "fingerprint": "1715115920130",
         "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6007297538/containers/67678269/versions/0?apiLink=version",
         "customTemplate": [
             {
