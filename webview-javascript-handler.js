@@ -6,11 +6,16 @@
 //   - or in a Custom HTML tag inside GTM (before GTM + Firebase integration starts to fire events).
 
 // Examples of the configurations that must be done in the app itself for this integration to work. This will receive the data in the app and fire the events/commands from there:
-// - Message Handler for iOS (option 1): https://github.com/xamarin/GoogleApisForiOSComponents/blob/main/docs/Firebase/Analytics/GettingStarted.md#implement-native-interface
-// - Message Handler for iOS (option 2): https://github.com/FirebaseExtended/analytics-webview/blob/c0b9a8037cb990f6d29050fbd827859a7851c527/ios/swift/FirebaseAnalyticsWeb/ViewController.swift
-// - Interface definitions for Android: 
-//   - https://github.com/FirebaseExtended/analytics-webview/blob/master/android/app/src/main/java/com/google/firebase/quickstart/analytics/webview/AnalyticsWebInterface.java
-//   - https://firebase.google.com/docs/analytics/webview?platform=android#implement_native_interface
+// 
+// - Native:
+//   - Message handler for iOS (option 1): https://github.com/xamarin/GoogleApisForiOSComponents/blob/main/docs/Firebase/Analytics/GettingStarted.md#implement-native-interface
+//   - Message handler for iOS (option 2): https://github.com/FirebaseExtended/analytics-webview/blob/c0b9a8037cb990f6d29050fbd827859a7851c527/ios/swift/FirebaseAnalyticsWeb/ViewController.swift
+//   - Interface definitions for Android: 
+//     - https://github.com/FirebaseExtended/analytics-webview/blob/master/android/app/src/main/java/com/google/firebase/quickstart/analytics/webview/AnalyticsWebInterface.java
+//     - https://firebase.google.com/docs/analytics/webview?platform=android#implement_native_interface
+// 
+// - React Native:
+//   - Message handler for both iOS and Android: https://github.com/react-native-webview/react-native-webview/blob/master/docs/Guide.md#the-windowreactnativewebviewpostmessage-method-and-onmessage-prop
 
 var firebaseAnalyticsInterface = {
   logEvent: function logEvent(name, params) {
