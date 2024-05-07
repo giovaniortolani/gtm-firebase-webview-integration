@@ -1,6 +1,6 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2024-05-07 21:05:20",
+    "exportTime": "2024-05-07 21:15:44",
     "containerVersion": {
         "path": "accounts/6007297538/containers/67678269/versions/0",
         "accountId": "6007297538",
@@ -380,6 +380,36 @@
                 "fingerprint": "1715115876327",
                 "firingTriggerId": [
                     "837"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6007297538",
+                "containerId": "67678269",
+                "tagId": "838",
+                "name": "Custom | All Pages | Initialization 一 Webview Javascript Handler",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\n  (function() {\n    try {\n      var firebaseAnalyticsInterface = {\n        logEvent: function logEvent(name, params) {\n          // debugger;\n          if (!name) {\n            return;\n          }\n      \n          if (window.AnalyticsWebInterface) {\n            // Call Android interface\n            window.AnalyticsWebInterface.logEvent(name, JSON.stringify(params));\n          } else if (window.webkit\n              && window.webkit.messageHandlers\n              && window.webkit.messageHandlers.firebase) {\n            // Call iOS interface\n            var message = {\n              command: 'logEvent',\n              name: name,\n              parameters: params\n            };\n            window.webkit.messageHandlers.firebase.postMessage(message);\n          } else {\n            // No Android or iOS interface found\n            console.log(\"No native APIs found.\");\n          }\n        },\n      \n        setUserProperty: function setUserProperty(name, value) {\n          // debugger;\n          if (!name || !value) {\n            return;\n          }\n      \n          if (window.AnalyticsWebInterface) {\n            // Call Android interface\n            window.AnalyticsWebInterface.setUserProperty(name, value);\n          } else if (window.webkit\n              && window.webkit.messageHandlers\n              && window.webkit.messageHandlers.firebase) {\n            // Call iOS interface\n            var message = {\n              command: 'setUserProperty',\n              name: name,\n              value: value\n            };\n            window.webkit.messageHandlers.firebase.postMessage(message);\n          } else {\n            // No Android or iOS interface found\n            console.log(\"No native APIs found.\");\n          }\n        },\n      \n        setDefaultEventParameters: function setDefaultEventParameters(params) {\n          // debugger; \n          if (!params) {\n            return;\n          }\n      \n          if (window.AnalyticsWebInterface) {\n            // Call Android interface\n            window.AnalyticsWebInterface.setDefaultEventParameters(JSON.stringify(params));\n          } else if (window.webkit\n              && window.webkit.messageHandlers\n              && window.webkit.messageHandlers.firebase) {\n            // Call iOS interface\n            var message = {\n              command: 'setDefaultEventParameters',\n              parameters: params\n            };\n            window.webkit.messageHandlers.firebase.postMessage(message);\n          } else {\n            // No Android or iOS interface found\n            console.log(\"No native APIs found.\");\n          }\n        },\n      \n        setUserId: function setUserId(userId) {\n          // debugger;\n          if (!userId) {\n            return;\n          }\n      \n          if (window.AnalyticsWebInterface) {\n            // Call Android interface\n            window.AnalyticsWebInterface.setUserId(userId);\n          } else if (window.webkit\n              && window.webkit.messageHandlers\n              && window.webkit.messageHandlers.firebase) {\n            // Call iOS interface\n            var message = {\n              command: 'setUserId',\n              userId: userId,\n            };\n            window.webkit.messageHandlers.firebase.postMessage(message);\n          } else {\n            // No Android or iOS interface found\n            console.log(\"No native APIs found.\");\n          }\n        },\n      \n        setAnalyticsCollectionEnabled: function setAnalyticsCollectionEnabled(enabled) {\n          if (typeof enabled !== 'boolean') {\n            return;\n          }\n      \n          // ...\n        },\n      \n        resetAnalyticsData: function resetAnalyticsData() {\n          // ...\n        },\n      \n        getAppInstanceId: function getAppInstanceId() {\n          // ...\n        },\n      \n        getSessionId: function getSessionId() {\n          // ...\n        },\n      \n        setConsent: function setConsent(consentSettings) {\n          if (!consentSettings) {\n            return\n          }\n          // ...\n        }\n      };\n    } catch(e) {}\n  })();\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1715116531898",
+                "firingTriggerId": [
+                    "2147479573"
                 ],
                 "tagFiringOption": "ONCE_PER_EVENT",
                 "monitoringMetadata": {
@@ -869,7 +899,7 @@
                 "name": "Event"
             }
         ],
-        "fingerprint": "1715115920130",
+        "fingerprint": "1715116544056",
         "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6007297538/containers/67678269/versions/0?apiLink=version",
         "customTemplate": [
             {
