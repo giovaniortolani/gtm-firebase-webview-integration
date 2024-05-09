@@ -12,6 +12,7 @@
 //   - iOS (option 2): https://github.com/FirebaseExtended/analytics-webview/blob/c0b9a8037cb990f6d29050fbd827859a7851c527/ios/swift/FirebaseAnalyticsWeb/ViewController.swift
 //   - Android: 
 //     - https://github.com/FirebaseExtended/analytics-webview/blob/master/android/app/src/main/java/com/google/firebase/quickstart/analytics/webview/AnalyticsWebInterface.java
+//     - or
 //     - https://firebase.google.com/docs/analytics/webview?platform=android#implement_native_interface
 // 
 // - React Native:
